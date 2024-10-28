@@ -47,7 +47,12 @@ const intervaloDataAdmissao = (dataAdmissao, dataSaida) => {
         const intervalo = intervalToDuration({
             start: new Date(dataEntrada),
             end: new Date()
-        }); 
+        })
+        if (intervalo.days === undefined) intervalo.days = 0
+        if (intervalo.months === undefined) intervalo.months = 0
+        if (intervalo.years === undefined) intervalo.years = 0
+        console.log(`Seu tempo de trabalho é de ${intervalo.days} dia(s) ${intervalo.months} mês(s) e ${intervalo.years} ano(s).`)  
+
     }
 }
 
@@ -59,6 +64,6 @@ dataLicenca("26/10/2024", 30)
 console.log('_________________________________')
 distanciaEntreDatas("27/10/2024", "03/03/2025")
 console.log('_________________________________')
-intervaloDataAdmissao("27/10/2024", "03/03/2025")
+intervaloDataAdmissao("10/10/2024")
 
 
