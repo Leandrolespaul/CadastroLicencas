@@ -23,7 +23,7 @@ const cadastroFunc = (nome, dataNascimento, CPF, telefone, cidade, CEP, logradou
     if (typeof matricula !== "string") Error('error')
     if (typeof localTrabalho !== "string") Error('error')
     if (typeof dataAdmissao !== "string") Error('error')
-    
+
     funcionarios.push({ id: id(), nome, dataNascimento, CPF, telefone, cidade, CEP, logradouro, bairro, numero, matricula, localTrabalho, dataAdmissao })
 }
 
@@ -118,11 +118,18 @@ const intervaloDataAdmissao = (id, dataSaida) => {
 
 
 
-
+// parametro primeiro é o ID para encontrar o funcionario
+// parametro segundo é a data inicial da licença
+// parametro terceiro são os dias a partir da data inicial da licença
 dataLicenca(1, "26/10/2024", 30)
 console.log('_________________________________')
+// parametro primeiro é o ID para encontrar o funcionario
+// parametro segundo é a data inicial da difernça entre datas
+// parametro terceiro a data final para calcular os dias entre a data inicial e final
 distanciaEntreDatas(1, "27/10/2024", "03/03/2025")
 console.log('_________________________________')
+// parametro primeiro é o ID para encontrar o funcionario
+// parametro segundo caso queira colocar a data de inicio de Admissao que ja vem automatico pelo cadastro
 intervaloDataAdmissao(1, "02/09/2022")
 
 
